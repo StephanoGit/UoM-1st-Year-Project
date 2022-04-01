@@ -174,7 +174,7 @@ def comment(request):
             comment.save()
             accom = comment.cleaned_data.get("accommodation")
             returnid = Accommodations.objects.get(name = accom)
-            return redirect('//localhost:8000/accommodation'+ '/' + str(returnid.id))
+            return redirect('https://marss-project.herokuapp.com/accommodation'+ '/' + str(returnid.id))
     context = {"form": form}
     return render(request , 'comment.html' , context)
 
@@ -191,7 +191,7 @@ def question(request):
             form.save()
             accom = form.cleaned_data.get("accommodation")
             returnid = Accommodations.objects.get(name = accom)
-            return redirect('//localhost:8000/accommodation'+ '/' + str(returnid.id))
+            return redirect('https://marss-project.herokuapp.com/accommodation'+ '/' + str(returnid.id))
     context = {"form" : form}
     return render(request , 'question.html' , context)
 
@@ -211,7 +211,7 @@ def answer(request):
             ques.answer = answer
             ques.save(update_fields=['answer'])
             accomid = question.get()["accommodation_id"]
-            return redirect('//localhost:8000/accommodation'+ '/' + str(accomid))
+            return redirect('https://marss-project.herokuapp.com/accommodation'+ '/' + str(accomid))
     context = {"form": form, "question" : question.get()}
     return render(request , 'answer.html' , context)
 
