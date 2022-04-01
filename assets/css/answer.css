@@ -1,0 +1,50 @@
+.answer-answerbox {
+  width: 1000px;
+  padding: 30px 20px;
+  height: auto;
+  margin-top: 131px;
+  margin-bottom: 60px;
+  border-radius: 50px;
+  background-color: rgba(00, 00, 00, 0.33);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.answer-header-row span {
+  font-size: 40px;
+  color: #eba550;
+  letter-spacing: 8px;
+}
+
+.answer-row-answerbox textarea {
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #b94e36;
+  color: #eba550;
+  box-sizing: border-box;
+  border-radius: 25px;
+  text-align: left;
+  font-size: 18px;
+  background-color: #151a29;
+}
+
+.answer-header .answer-submit-button-container {
+  text-align: center;
+}
+
+.answer-submit-button {
+  font-family: "Fabula Valhalla";
+  background-color: #eba550;
+  border-color: #eba550;
+  color: black;
+  font-size: 18px;
+  letter-spacing: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  width: 50%;
+  border-radius: 20px;
+  text-align: center;
+  margin-left: 26%;
+}

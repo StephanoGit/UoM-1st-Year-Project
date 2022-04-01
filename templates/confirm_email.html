@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/confirm_email.css' %}">
+{% endblock %}
+
+{% block content %}
+<form action="" method="POST">
+    <div class="confirm-box">
+        {% if success %}
+            {% csrf_token %}
+            <h2>NICE!</h2>
+            <p>Your are now a confirmed member of the MARSS comunity! Go ahead and post your first review after you login.</p>
+        {% else %}
+            <h2>UPSSS SOMETHING WENT WRONG!</h2>
+            <p>We are sorry to inform you but it appears that something went wrong with your email verification. If you think this is an issue please contact our support team.</p>
+            <a href="mailto:marss.project.y8@gmail.com">marss.project.y8@gmail.com</a>
+        {% endif %}
+    </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon"href="{% static 'favicon.ico' %}">
+        
+        <link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+       
+
+        {% block extrahead %}
+            replace specific stylesheets
+        {% endblock %}
+
+        <title>MARSS - accommodation review website</title>
+    </head>
+
+    <body>
+            <!-- NAVBAR -->
+            {% include 'components/navbar.html' %}
+            <div class="navigationBar" style="height: 61px;">
+            </div>
+
+            <!-- REPLACEABLE CONTENT -->
+            <div class="replaceableContent" style="height: auto; gap: 100px">
+            {% block content %}
+                replace content
+            {% endblock %}
+            
+            </div>
+            
+    </body>
+    {% include 'components/footer.html' %}
+</html>

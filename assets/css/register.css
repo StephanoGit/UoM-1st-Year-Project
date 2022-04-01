@@ -1,0 +1,75 @@
+.register_bttn {
+    font-family: 'Fabula Valhalla';
+    background-color: #EBA550;
+    border-color: #EBA550;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 6px;
+    padding: 8px 10px;
+    margin: 17px 20px;
+    cursor: pointer;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+}
+.registerBox { 
+    width: 350px;
+    padding: 30px 20px;
+    height: auto;
+    margin-top: 131px;
+    margin-bottom: 60px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: rgba(00,00,00,0.33);
+
+} 
+
+input[type=text],
+input[type=password],
+input[type=email]{
+     width: 80%;
+     padding: 8px 10px;
+     margin: 17px 0;
+     display: inline-block;
+     border: 2px solid #B94E36;
+     color: #EBA550;
+     box-sizing: border-box;
+     border-radius: 25px;
+     text-align: center;
+     font-size: 16px;
+     background-color: transparent;
+}
+
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus{
+    outline: none;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    color: #EBA550;
+    letter-spacing: 10px;
+}
+
+.form_errors{
+    font-size: .7em;
+    color: #b93636;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form_redirect{
+    margin: 0 auto;
+    width: 80%;
+    font-size: .7em;
+    color: #535353;
+}
+
+.form_redirect a{
+    text-decoration: underline;
+    color: #B94E36;
+}

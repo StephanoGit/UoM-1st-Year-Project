@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block content %}
+    <form action="" method="POST">
+        <div class="registerBox">
+            <h2>REGISTER</h2>
+
+            <div class="form_errors">
+                {% for message in messages %}
+                <ul>
+                    <li>{{ message }}</li><br>
+                </ul>
+                {% endfor %}
+
+            </div>
+
+            {% csrf_token %}
+
+            {{ form.username }}
+            {{ form.email }}
+            {{ form.password1 }}
+            {{ form.password2 }}
+
+            <input class="register_bttn" type="submit" value="REGISTER">
+            <p class="form_redirect">Or if you already have an account <a href="{% url 'loginPage' %}">Login</a></p>
+        </div>
+    </form>
+
+{% endblock %}

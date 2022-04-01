@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>USER PAGE</h1>
+    <p>This is the user page of the website</p>
+
+    
+    <!-- THIS IS JUST FOR LEARNING -->
+    <p>
+        {{ my_text }} <br>
+        {{ my_number }} <br>
+        {{ my_list }} <br>
+
+    </p>
+
+    <ul>
+        {% for item in my_list %}
+            <li>{{ forloop.counter }} - {{ item }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

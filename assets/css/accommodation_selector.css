@@ -1,0 +1,43 @@
+.accomodation_selector-locations-container {
+    /* container for the picture with all of the accomodations in that region underneath*/
+    background-color: rgba(0, 0, 0, 0.33);
+    border-radius: 50px;
+    padding: 40px 40px 25px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1000px;
+    position: relative;
+}
+
+.accomodation_selector-locations-image {
+    border: #B94E36 solid 2px;
+    border-radius: 25px;
+}
+
+.accomodation_selector-buttons-container {
+    /*container for the accomodation name */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.accomodation_selector-buttons-text {
+    /*for the text of the accomodation buttons*/
+    text-decoration: none;
+    color: #EBA550;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0);
+    border: #B94E36 solid 2px;
+    border-radius: 25px;
+    padding: 15px 20px;
+    margin: 15px;
+}
+
+.accomodation_selector-locations-name {
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -400%);
+}

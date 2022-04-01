@@ -1,0 +1,45 @@
+{% block content %}
+
+<div class="questions_section-panel-container">
+    <div class="questions_section-panel-title">
+        <h2>QUESTIONS</h2>
+    </div>
+    
+    {% for question in questions %}
+        {% include 'components/question.html' %}
+        
+    {% empty %}
+        <div style ="width: 70%;"><h3>It looks like there are no questions... Be the first to ask one!</h3></div>
+    
+    {% endfor %}
+
+    {% if showbuttonQuestions %}
+
+    <div class="questions_section-buttons-container">
+        <form method="POST" action="{% url 'accommodation' accom.id %} ">
+            {% csrf_token %}
+            <input type="hidden" value = "2" name="question_btnn">
+             <input type="submit"  value = "MORE QUESTIONS"/>
+        </form>
+        <form method="GET" , action = "{% url 'questionPage' %}">
+        <input type="hidden" value={{accom.id}} name="askques_button_hidden">
+        <input type="submit" value="ASK QUESTION" placeholder ="ASK QUESTION" name="askques_button"/>
+        </form>
+    </div>
+
+    {% else %}
+
+    <div class="questions_section-buttons-container" style="justify-content: center;">
+        <form method="GET" , action = "{% url 'questionPage' %}">
+        <input type="hidden" value={{accom.id}} name="askques_button_hidden">
+        <input type="submit" value="ASK QUESTION" placeholder ="ASK QUESTION" name="askques_button"/>
+        </form>
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}
+
+

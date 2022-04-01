@@ -1,0 +1,70 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block content %}
+<div class="page-row">
+    <div class="about-container">
+        <h1 >ABOUT</h1>
+        <br>
+        <h2>How it started</h2>
+        <br>
+        <div class="intro-row">
+            <div class="intro-text-col">
+                <p>As first years that struggled to find a common platform where we could compare all the different University of Manchester accommodations based on reviews, pictures, and facts, we decided to make the lives of future students easier. 
+                    Our website, MARSS is specifically designed for University of Manchester students with all the ratings and comments reliably provided by current students at the university. Information about each hall of residence can be found along with a map, comments, and ratings based on specific criteria. Find your Student Space now.</p>
+            </div>
+
+            <div class="intro-img-col">
+                <img src="{% static 'images/aboutPage.jpg' %}">
+            </div>
+        </div>
+
+        <br>
+        <h2>Our Team</h2>
+        <br>
+        <br>
+        <br>
+        <div class="member-row">
+            <div class="member-col">
+                <img class="team_images" src="{% static 'images/teamicons/jaiming.png' %}">
+                <h4>Jiaming</h4>
+            </div>
+            <div class="member-col">
+                <img class="team_images" src="{% static 'images/teamicons/nouf.png' %}">
+                <h4>Nouf</h4>
+            </div>
+            <div class="member-col">
+                <img class="team_images" src="{% static 'images/teamicons/olivia.png' %}">
+                <h4>Olivia</h4>
+            </div>
+            <div class="member-col">
+                <img class="team_images" src="{% static 'images/teamicons/satwik.png' %}">
+                <h4>Satwik</h4>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="member-row">
+            <div class="member-col">
+                <img class="team_images" src="{% static 'images/teamicons/shamanth.png' %}">
+                <h4>Shamanth</h4>
+            </div>
+            <div class="member-col">
+                <img class="team_images" src="{% static 'images/teamicons/stefan.png' %}">
+                <h4>Stefan</h4>
+            </div>
+            <div class="member-col">
+                <img class="team_images" src="{% static 'images/teamicons/suhani.png' %}">
+                <h4>Suhani</h4>
+            </div>
+        </div>
+    </div>
+    <div class="about-contact-container">
+        <h1>CONTACT</h1>
+        <p>You can find the <a style="text-decoration: none; color:#B94E36"href="{% url 'terms_and_conditions' %}">Terms and Conditions</a> here. If you have any queries or technical difficulties, please contact us using the following details:
+        </p>
+        <a href="tel:+447551730195" class="footer-links">Phone: +44 7551730195</a>
+        <a href="mailto:marss.project.y8@gmail.com" class="footer-links">Email: marss.project.y8@gmail.com</a>
+    </div>
+</div>
+
+{% endblock %}

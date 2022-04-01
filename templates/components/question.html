@@ -1,0 +1,47 @@
+{% block content %}
+
+<div class="question-container">
+    <div class="question-text">
+        <h2>
+            {{question.question}}
+        </h2>
+    </div>
+    <div class="question-user">
+        <h5 style="letter-spacing: 3px;">{{question.}}</h5>
+    </div>
+    <div class="question-separator">
+        <div class="line"></div>
+    </div>
+    
+    {% if question.answer != ''%}
+    <div class="question-title">
+    </div>
+    <div class="question-text">
+        <h3>
+            {{question.answer}}
+        </h3>
+    </div>
+    {% else %}
+
+    <form method="GET" , action = "{% url 'answerbutton' %}">
+        <input type="hidden" value={{question.id}} name="answer_button_hidden">
+        <input type="submit" value="ANSWER" placeholder ="ANSWER" name="answer_button" 
+        style = "
+        font-family: 'Fabula Valhalla';
+        border:none;
+        text-decoration: none;
+        color: black;
+        font-size: 1.8rem;
+        background-color: #EBA550;
+        border-radius: 25px;
+        padding: 15px 85px;
+        margin-bottom: 20px;"/>
+    </form>
+    {% endif %}
+
+    <div class="question-user">
+        <h5 style="letter-spacing: 3px;">{{question.}}</h5>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/question.css' %}">
+{% endblock %}
+
+{% block content %}
+<form method = "POST" action="">
+  {% csrf_token %}
+  <div class="question-container">
+    <div class="question-row">
+
+      <div class="question-text-col">
+        <p>ACCOMMODATION</p>
+        <p>QUESTION</p>
+      </div>
+
+      <div class="question-inputbox-col">
+        {{form.accommodation}}
+        {{form.question}}
+      </div>
+      
+    </div>
+
+      <div class="write_review-submitReview-button-container">
+        <input class="write_review-submitReview-button" , type="submit" , value="ASK QUESTION"/>
+      </div>
+      
+    
+  </div>
+</form>
+
+{% endblock %}

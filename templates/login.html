@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+<form action="" method="POST">
+    <div class="loginBox">
+        <h2>LOGIN</h2>
+
+        <div class="form_errors">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% csrf_token %}
+
+        {{ form.username }}
+        {{ form.password1 }}
+
+        <input class="login_bttn" type="submit" value="LOGIN">
+        <p class="form_redirect">Or if you don't have an account <a href="{% url 'registerPage' %}">Register</a></p>
+    </div>
+</form>
+
+{% endblock %}

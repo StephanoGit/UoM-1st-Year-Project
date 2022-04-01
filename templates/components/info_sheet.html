@@ -1,0 +1,29 @@
+{% block content %}
+
+<div class="info_sheet-table-panel">
+    <h2>INFO SHEET</h2>
+    
+    <div class="info_sheet-table-text">
+        <div class="info_sheet-table-column categories">
+            <p>Occupancy</p>
+            <p>Student Type</p>
+            <p>Price</p>
+            <p>Bathroom</p>
+            <p>Campus</p>
+            <p>Catering</p>
+        </div>
+
+        <div class="info_sheet-table-separator"></div>
+
+        <div class="info_sheet-table-column information">
+            <p>{{accom.occupancy}}</p>
+            <p>{{accom.student_type}}</p>
+            <p>From {{accom.price}}/pw</p>
+            <p>{{accom.bathroom}}</p>
+            <p>{{accom.campus}}</p>
+            <p>{{accom.catering}}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+
+
+
+/* ======================== */
+/* GENERAL CSS CONVENTIONS  */
+/* ======================== */
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Fabula Valhalla';
+    font-weight: normal;
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.5rem;
+    background-image: url("../images/background_img.png");
+    background-attachment: fixed;
+    background-color: #151A29;
+    display: flex;
+    flex-direction: column;
+}
+
+.replaceableContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 100px;
+    margin: auto;
+}

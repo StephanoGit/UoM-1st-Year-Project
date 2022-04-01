@@ -1,0 +1,21 @@
+{% load static %}
+{% block content %}
+
+<div class="region-container">
+    {% for region in region %}
+    <div class="region_ region-victoriaPark">
+        <a href="{% url 'search' %}?q={{region.name}}">
+        {% if region.name == "Victoria Park" %}
+        <img class="region-images" src="{% static 'images/victoriaPark_img.png' %}"></img>
+        {% elif region.name == "Fallowfield" %}
+        <img class="region-images" src="{% static 'images/fallowfield_img.png' %}"></img>
+        {% elif region.name == "City Centre" %}
+        <img class="region-images" src="{% static 'images/cityCenter_img.png' %}"></img>
+        {% endif %}
+        </a>
+        <p><a href="{% url 'search' %}?q={{region.name}}" class="region-names">{{region.name}}</a></p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

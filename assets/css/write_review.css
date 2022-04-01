@@ -1,0 +1,136 @@
+.write_review-reviewbox {
+  width: 1400px;
+  padding: 30px 20px;
+  height: auto;
+  margin-top: 131px;
+  margin-bottom: 60px;
+  border-radius: 50px;
+  background-color: rgba(00, 00, 00, 0.33);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.write_review-inputrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.write_review-inputcol-text,
+.write_review-inputcol-boxes {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 30px;
+}
+
+.write_review-inputcol-text {
+  gap: 40px;
+}
+
+.write_review-inputcol-text .write_review-inputcol-accom-text {
+  font-size: 35px;
+  color: #eba550;
+  letter-spacing: 8px;
+}
+
+.write_review-inputcol-text .write_review-inputcol-subject-text {
+  font-size: 35px;
+  color: #eba550;
+  letter-spacing: 8px;
+  padding-bottom: 210px;
+}
+
+.write_review-inputcol-text .write_review-inputcol-comment-text {
+  font-size: 35px;
+  color: #eba550;
+  letter-spacing: 8px;
+}
+
+.write_review-inputcol-boxes select {
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #b94e36;
+  color: #eba550;
+  box-sizing: border-box;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 16px;
+  background-color: transparent;
+  float: right;
+}
+
+.write_review-inputcol-boxes input {
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #b94e36;
+  color: #eba550;
+  box-sizing: border-box;
+  border-radius: 25px;
+  text-align: left;
+  font-size: 18px;
+  background-color: #151a29;
+  float: right;
+}
+
+.write_review-inputcol-boxes textarea {
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #b94e36;
+  color: #eba550;
+  box-sizing: border-box;
+  border-radius: 25px;
+  text-align: left;
+  font-size: 18px;
+  background-color: #151a29;
+  float: right;
+}
+
+.write_review-star-row {
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  padding-top: 30px;
+  display: flex;
+  width: 95%;
+  height: 350px;
+  justify-content: space-between;
+  font-size: 2.3rem;
+}
+
+.write_review-star-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  letter-spacing: 8px;
+}
+
+.write_review-star-column .rating-text {
+  color: #eba550;
+  letter-spacing: 8px;
+  font-size: 35px;
+}
+
+.write_review-star-column .star-itself .star-rating_row {
+  justify-content: space-between;
+}
+
+.write_review-submitReview-button-container {
+  text-align: center;
+}
+
+.write_review-submitReview-button {
+  font-family: "Fabula Valhalla";
+  background-color: #eba550;
+  border-color: #eba550;
+  color: black;
+  font-size: 18px;
+  letter-spacing: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  width: 25%;
+  border-radius: 20px;
+  text-align: center;
+  margin: auto;
+}

@@ -1,0 +1,44 @@
+{% block content %}
+
+<div class="comments_section-panel-container">
+    <div class="comments_section-panel-title">
+        <h2>COMMENTS & REVIEWS</h2>
+    </div>
+    {% for comment in comments %}
+        {% include 'components/comment.html' %}
+
+    {% empty %}
+
+    <div style ="width: 70%;"><h3>It looks like there are no comments... Be the first to post one!</h3></div>
+
+    {% endfor %}
+
+    {% if showbuttonComments %}
+
+    <div class="comments_section-buttons-container">
+        <form method="POST" action="{% url 'accommodation' accom.id %} ">
+            {% csrf_token %}
+            <input type="hidden" value= "1" name="comment_btnn">
+             <input type="submit"  value = "MORE REVIEWS"/>
+        </form>
+        <!-- <a href="">MORE REVIEWS</a> -->
+        <form method="GET" , action = "{% url 'commentPage' %}">
+            <input type="hidden" value={{accom.id}} name="addcomm_button_hidden">
+            <input type="submit" value="ADD REVIEW" placeholder ="ASK QUESTION" name="addcomm_button"/>
+        </form>
+    </div>
+
+    {%else%}
+
+    <div class="comments_section-buttons-container" style="justify-content: center;">
+        <form method="GET" , action = "{% url 'commentPage' %}">
+            <input type="hidden" value={{accom.id}} name="addcomm_button_hidden">
+            <input type="submit" value="ADD REVIEW" placeholder ="ASK QUESTION" name="addcomm_button"/>
+        </form>
+    </div>
+
+    {%endif%}
+</div>
+
+
+{% endblock %}

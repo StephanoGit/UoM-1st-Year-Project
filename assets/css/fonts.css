@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Fabula Valhalla';
+    src: url('../fonts/fabula-valhalla/FabulaValhalla-Bold.woff2') format('woff2'),
+        url('../fonts/fabula-valhalla/FabulaValhalla-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fabula Valhalla';
+    src: url('../fonts/fabula-valhalla/FabulaValhalla-BoldItalic.woff2') format('woff2'),
+        url('../fonts/fabula-valhalla/FabulaValhalla-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fabula Valhalla';
+    src: url('../fonts/fabula-valhalla/FabulaValhalla-Italic.woff2') format('woff2'),
+        url('../fonts/fabula-valhalla/FabulaValhalla-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fabula Valhalla';
+    src: url('../fonts/fabula-valhalla/FabulaValhalla.woff2') format('woff2'),
+        url('../fonts/fabula-valhalla/FabulaValhalla.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

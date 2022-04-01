@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/star.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/write_review.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+{% block content %}
+<form action="" method="POST">
+  {% csrf_token %}
+  <div class="write_review-reviewbox">
+      <div class="write_review-inputrow">
+
+        <div class="write_review-inputcol-text">
+          <p class="write_review-inputcol-accom-text">ACCOMMODATION</p>
+          <p class="write_review-inputcol-subject-text">SUBJECT</p>
+          <p class="write_review-inputcol-comment-text">COMMENT</p>
+        </div>
+
+        <div class="write_review-inputcol-boxes">
+          {{form.accommodation}}
+          {{form.subject}}
+          {{form.comment}}
+        </div>
+
+    </div>
+
+    <div class="write_review-star-row">
+
+      <div class="write_review-star-column">
+        <span class="rating-text">RATING</span>
+      </div>
+
+      <div class="write_review-star-column">
+          <p>Value of money:</p>
+          <p>Location:</p>
+          <p>Internet:</p>
+          <p>Social:</p>
+          <p>Overall:</p>
+      </div>
+
+      <div class="write_review-star-column">
+        <div class="star-itself">
+          <input type="radio" name="vom-rating" id="vom-rating10" value="5" required /><label for="vom-rating10" title="5"></label>
+          <input type="radio" name="vom-rating" id="vom-rating9" value="4.5" required /><label for="vom-rating9" title="4.5" class="half"></label>
+          <input type="radio" name="vom-rating" id="vom-rating8" value="4" required /><label for="vom-rating8" title="4"></label>
+          <input type="radio" name="vom-rating" id="vom-rating7" value="3.5" required /><label for="vom-rating7" title="3.5" class="half"></label>
+          <input type="radio" name="vom-rating" id="vom-rating6" value="3" required /><label for="vom-rating6" title="3"></label>
+          <input type="radio" name="vom-rating" id="vom-rating5" value="2.5" required /><label for="vom-rating5" title="2.5" class="half"></label>
+          <input type="radio" name="vom-rating" id="vom-rating4" value="2" required /><label for="vom-rating4" title="2"></label>
+          <input type="radio" name="vom-rating" id="vom-rating3" value="1.5" required /><label for="vom-rating3" title="1.5" class="half"></label>
+          <input type="radio" name="vom-rating" id="vom-rating2" value="1" required /><label for="vom-rating2" title="1"></label>
+          <input type="radio" name="vom-rating" id="vom-rating1" value="0.5" required /><label for="vom-rating1" title="0.5" class="half"></label>
+        </div>
+
+        <div class="star-itself">
+          <input type="radio" name="loc-rating" id="loc-rating10" value="5" required /><label for="loc-rating10" title="5"></label>
+          <input type="radio" name="loc-rating" id="loc-rating9" value="4.5" required /><label for="loc-rating9" title="4.5" class="half"></label>
+          <input type="radio" name="loc-rating" id="loc-rating8" value="4" required /><label for="loc-rating8" title="4"></label>
+          <input type="radio" name="loc-rating" id="loc-rating7" value="3.5" required /><label for="loc-rating7" title="3.5" class="half"></label>
+          <input type="radio" name="loc-rating" id="loc-rating6" value="3" required /><label for="loc-rating6" title="3"></label>
+          <input type="radio" name="loc-rating" id="loc-rating5" value="2.5" required /><label for="loc-rating5" title="2.5" class="half"></label>
+          <input type="radio" name="loc-rating" id="loc-rating4" value="2" required /><label for="loc-rating4" title="2"></label>
+          <input type="radio" name="loc-rating" id="loc-rating3" value="1.5" required /><label for="loc-rating3" title="1.5" class="half"></label>
+          <input type="radio" name="loc-rating" id="loc-rating2" value="1" required /><label for="loc-rating2" title="1"></label>
+          <input type="radio" name="loc-rating" id="loc-rating1" value="0.5" required /><label for="loc-rating1" title="0.5" class="half"></label>
+        </div>
+
+        <div class="star-itself">
+          <input type="radio" name="int-rating" id="int-rating10" value="5" required /><label for="int-rating10" title="5"></label>
+          <input type="radio" name="int-rating" id="int-rating9" value="4.5" required /><label for="int-rating9" title="4.5" class="half"></label>
+          <input type="radio" name="int-rating" id="int-rating8" value="4" required /><label for="int-rating8" title="4"></label>
+          <input type="radio" name="int-rating" id="int-rating7" value="3.5" required /><label for="int-rating7" title="3.5" class="half"></label>
+          <input type="radio" name="int-rating" id="int-rating6" value="3" required /><label for="int-rating6" title="3"></label>
+          <input type="radio" name="int-rating" id="int-rating5" value="2.5" required /><label for="int-rating5" title="2.5" class="half"></label>
+          <input type="radio" name="int-rating" id="int-rating4" value="2" required /><label for="int-rating4" title="2"></label>
+          <input type="radio" name="int-rating" id="int-rating3" value="1.5" required /><label for="int-rating3" title="1.5" class="half"></label>
+          <input type="radio" name="int-rating" id="int-rating2" value="1" required /><label for="int-rating2" title="1"></label>
+          <input type="radio" name="int-rating" id="int-rating1" value="0.5" required /><label for="int-rating1" title="0.5" class="half"></label>
+        </div>
+
+        <div class="star-itself">
+          <input type="radio" name="soc-rating" id="soc-rating10" value="5" required /><label for="soc-rating10" title="5"></label>
+          <input type="radio" name="soc-rating" id="soc-rating9" value="4.5" required /><label for="soc-rating9" title="4.5" class="half"></label>
+          <input type="radio" name="soc-rating" id="soc-rating8" value="4" required /><label for="soc-rating8" title="4"></label>
+          <input type="radio" name="soc-rating" id="soc-rating7" value="3.5" required /><label for="soc-rating7" title="3.5" class="half"></label>
+          <input type="radio" name="soc-rating" id="soc-rating6" value="3" required /><label for="soc-rating6" title="3"></label>
+          <input type="radio" name="soc-rating" id="soc-rating5" value="2.5" required /><label for="soc-rating5" title="2.5" class="half"></label>
+          <input type="radio" name="soc-rating" id="soc-rating4" value="2" required /><label for="soc-rating4" title="2"></label>
+          <input type="radio" name="soc-rating" id="soc-rating3" value="1.5" required /><label for="soc-rating3" title="1.5" class="half"></label>
+          <input type="radio" name="soc-rating" id="soc-rating2" value="1" required /><label for="soc-rating2" title="1"></label>
+          <input type="radio" name="soc-rating" id="soc-rating1" value="0.5" required /><label for="soc-rating1" title="0.5" class="half"></label>
+        </div>
+
+        <div class="star-itself">
+          <input type="radio" name="overall-rating" id="overall-rating10" value="5" required /><label for="overall-rating10" title="5"></label>
+          <input type="radio" name="overall-rating" id="overall-rating9" value="4.5" required /><label for="overall-rating9" title="4.5" class="half"></label>
+          <input type="radio" name="overall-rating" id="overall-rating8" value="4" required /><label for="overall-rating8" title="4"></label>
+          <input type="radio" name="overall-rating" id="overall-rating7" value="3.5" required /><label for="overall-rating7" title="3.5" class="half"></label>
+          <input type="radio" name="overall-rating" id="overall-rating6" value="3" required /><label for="overall-rating6" title="3"></label>
+          <input type="radio" name="overall-rating" id="overall-rating5" value="2.5" required /><label for="overall-rating5" title="2.5" class="half"></label>
+          <input type="radio" name="overall-rating" id="overall-rating4" value="2" required /><label for="overall-rating4" title="2"></label>
+          <input type="radio" name="overall-rating" id="overall-rating3" value="1.5" required /><label for="overall-rating3" title="1.5" class="half"></label>
+          <input type="radio" name="overall-rating" id="overall-rating2" value="1" required /><label for="overall-rating2" title="1"></label>
+          <input type="radio" name="overall-rating" id="overall-rating1" value="0.5" required /><label for="overall-rating1" title="0.5" class="half"></label>
+        </div>
+
+      </div>
+
+    </div>
+    
+
+    <div class="write_review-submitReview-button-container">
+      <input class="write_review-submitReview-button" , type="submit" , value="ADD REVIEW"/>
+    </div>
+</div>
+</form>
+
+
+{% endblock %}

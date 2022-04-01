@@ -1,0 +1,20 @@
+
+<header>
+    <p class="logo"><a href="{% url 'homePage' %}" style="text-decoration: none; color: #B94E36;">MARSS</a></p>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+        <ul>
+        <li><a href="{% url 'about'%}">About</a></li>
+        {% if request.user.is_authenticated %}
+        <li><a href="{% url 'logoutPage' %}">Logout</a></li>
+        {% else %}
+        <li><a href="{% url 'loginPage' %}"> login</a></li>
+        {% endif %}
+        <li><a href="{% url 'registerPage' %}">Register</a></li>
+        <li><a href="{% url 'commentPage'%}">Write Review</a></li>
+        </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+</header>

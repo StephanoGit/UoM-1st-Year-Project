@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/region_selector.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/accommodation_selector.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+
+    <style>
+        .home--about1{
+            background-color: rgba(0, 0, 0, 0.33);
+            border-radius: 50px;
+            padding: 40px 60px 40px 60px;
+            display: flex;
+            width: 1003px;
+            gap: 80px;
+        }
+
+        .home--about1-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .home--about1-image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home--about1 h1,
+        .home--about2-text h1{
+            letter-spacing: 2px;
+            color: #EBA550;
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        .home--about1 p,
+        .home--about2 p{
+            letter-spacing: 1px;
+            line-height: 1.1em;
+        }
+
+        .home--about1 img{
+            height: 80%;
+        }
+
+        .home--about2{
+            background-color: rgba(0, 0, 0, 0.33);
+            border-radius: 50px;
+            padding: 60px;
+            display: flex;
+            justify-content: space-between;
+            text-align: right;
+            width: 1003px;
+            gap: 80px;
+        }
+
+        .home--about2-buttons{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px
+        }
+
+        .home--about2-buttons a,
+        .home--about4-rank a{
+            text-decoration: none;
+            color: black;
+            font-size: 1.8rem;
+            background-color: #EBA550;
+            border-radius: 25px;
+            padding: 15px 100px;
+            margin-bottom: 20px;
+        }
+
+        .home--about4-rank a{
+            margin-bottom: 0;
+        }
+
+        .home--about2-text{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            align-items: flex-end;
+            gap: 30px
+        }
+
+        .home--about2-text p{
+            width: 90%;
+        }
+
+        .home--about4-rank{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            gap: 12px;
+        }
+
+        .home--about4-rank img{
+            width: 80%;
+            margin: auto;
+        }
+
+        .home--about3{
+            background-color: rgba(0, 0, 0, 0.33);
+            border-radius: 50px;
+            padding: 60px 60px 60px 60px;
+            display: flex;
+            flex-direction: column;
+            width: 1003px;
+            gap: 50px;
+        }
+
+        .home--about3-image{
+            display: flex;
+            gap: 30px
+        }
+
+        .home--about3-text{
+            width: 80%;
+            text-align: center;
+            margin: auto;
+        }
+
+        .home--about3-text h1{
+            color: #EBA550;
+            letter-spacing: 4px;
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        .home--about3-image a{
+            text-decoration: none;
+            margin: auto 0;
+        }
+
+    </style>
+{% endblock %}
+{% block content %}
+
+<div class="home-welcome-container">
+    <div><h1>STUDENT SPACE</h1></div>
+    <div><p>Ever Expanding</p></div>
+    <div class="search-bar">
+        <form method="GET" , action = "{% url 'search' %}">
+          <input type="text" , name = 'q' , placeholder="Find yours now" class="home-search-bar--input" style="background-color: rgba(0, 0, 0, 0.33);
+          font-family: 'Fabula Valhalla';
+          height: 50px;
+          width: 400px;
+          border: solid #B94E36 2px;
+          border-radius: 50px;
+          text-align: center;
+          color: white;
+          font-size: 1.2em;
+          float: right;">
+        </form>
+    </div>
+</div>
+
+
+{% include 'components/region_selector.html' %}
+
+<div class="home--about1">
+    <div class="home--about1-text">
+        <h1>Best review website for Manchester students</h1>
+        <p>Whether you need reviews for student accommodations, locations or facilities — MARSS reviews helps you experience the univeristy lifestyle you desire and deserve.</p>
+    </div>
+    <div class="home--about1-image">
+        <img src="{% static 'images/about1.svg' %}">
+    </div>
+</div>
+
+<div class="home--about2">
+    <div class="home--about2-buttons">
+        <a href="{% url 'loginPage' %}">LOGIN</a>
+        <a href="{% url 'registerPage' %}" style="padding: 15px 80px;">REGISTER</a>
+
+    </div>
+    <div class="home--about2-text">
+        <h1>Are you a Manchester student? Connect now!</h1>
+        <p>Our community is made up of only Manchester University students, so you know that the reviews are genuine. Help us create a better experience for students to come, connect now and leave a review!</p>
+    </div>
+</div>
+
+<div class="home--about1">
+    <div class="home--about1-text">
+        <h1>Check out our ranking system</h1>
+        <p>You can easly find out the overall score of different accommodations by checking out our ranking system. It is based on the reviews posted by fellow students. </p>
+    </div>
+    <div class="home--about4-rank">
+        <img src="{% static 'images/rank_img.svg' %}">
+        <a href="{% url 'ranking' %}" style="padding: 15px 80px;">RANKINGS</a>
+    </div>
+</div>
+
+<div class="home--about3">
+    <div class="home--about3-text">
+        <h1>Connect with the whole student community</h1>
+    </div>
+    <div class="home--about3-image">
+        <a href="https://www.manchester.ac.uk/" target="_blank"><img src="{% static 'images/manchesterUni_logo.svg' %}"></a>
+        <a href="https://manchesterstudentsunion.com/" target="_blank"><img src="{% static 'images/su_logo.svg' %}"></a>
+        <a href=""><img src="{% static 'images/marss_logo.svg' %}" target="_blank"></a>
+    </div>
+</div>
+
+
+
+<!-- {% include 'components/accommodation_selector.html' %} -->
+
+{% endblock %}
+
+<! home-search-bar-input does not seem to apply css to the text without having inline styling>

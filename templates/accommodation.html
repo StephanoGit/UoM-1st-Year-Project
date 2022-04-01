@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/info_sheet.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/comments_section.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/comment.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/google_location.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/questions_section.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/question_container.css' %}">
+    <link rel = "stylesheet" type="text/css" href = "{% static 'css/image_slider.css' %}">
+    <style>
+        .accommodation--bttn-apply{
+            text-decoration: none;
+            color: black;
+            font-size: 2.5rem;
+            background-color: #EBA550;
+            border-radius: 30px;
+            padding: 15px 100px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+
+<br><br>
+{% include 'components/image_slider.html' %}
+
+{% comment %} {% if accom.image %}
+    <img src="{{accom.image.url}}" alt="">
+{% else %}
+    <h1 style="color: #EBA550">IMAGE HERE</h1>
+{% endif %} {% endcomment %}
+<!-- <h4>overall score</h4>
+<h4>{{overall.overall__avg}}</h4> -->
+
+<!-- PHOTO SLIDER -->
+
+
+<a class="accommodation--bttn-apply" href="http://www.accommodation.manchester.ac.uk/applynow/" target="_blank">APPLY NOW</a>
+
+<!-- INFO SHEET -->
+{% include 'components/info_sheet.html' %}
+
+
+<!-- GOOGLE MAPS -->
+{% include 'components/google_location.html' %}
+
+<!-- QUESTION SECTION -->
+{% include 'components/questions_section.html' %}
+
+<!-- COMMENT SECTION -->
+{% include 'components/comments_section.html' %}
+
+
+
+
+
+{% endblock %}

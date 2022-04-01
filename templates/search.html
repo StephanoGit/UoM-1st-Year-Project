@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/search.css' %}">
+{% endblock %}
+{% block content %}
+<br>
+<div class="search--conatiner">
+	<div class="search--filter">
+        <h1 style="color:#eba550; letter-spacing: 4px; text-align: center;">FILTER</h1>
+		<form action="." method="POST">
+			{% csrf_token %}
+            <div class="filter-object">
+                <h2>CAMPUS</h2>
+                <div class="filter-object--options">
+                    <div class="filter-object--options-names">
+                        <p> Victoria Park </p>
+                        <p> City </p>
+                        <p> Fallowfield </p>
+                    </div>
+                    <div class="filter-object--options-boxes">
+                        <input type="checkbox" value="Victoria Park" id="victoria park" name="filter_objects" />
+                        <input type="checkbox" value="City Centre" id="city centre" name="filter_objects" />
+                        <input type="checkbox" value="Fallowfield" id="fallow field" name="filter_objects" />
+                    </div>
+                </div>
+            </div>
+    
+            <div class="filter-object">
+                <h2>CATERING</h2>
+                <div class="filter-object--options">
+                    <div class="filter-object--options-names">
+                        <p> Catered </p>
+                        <p> Self-Catered </p>
+                    </div>
+                    <div class="filter-object--options-boxes">
+                        <input type="checkbox" value="Catered" id="catered" name="filter_objects" />
+                        <input type="checkbox" value="Self-catered" id="self-catered" name="filter_objects" />
+                    </div>
+                </div>
+            </div>
+    
+            <div class="filter-object">
+                <h2>PRICE</h2>
+                <div class="filter-object--options">
+                    <div class="filter-object--options-names">
+                        <p> $150 - $max </p>
+                        <p> $130 - $150 </p>
+                        <p> $min - $130 </p>
+                    </div>
+                    <div class="filter-object--options-boxes">
+                        <input type="checkbox" value="150" id="150" name="filter_objects" />
+                        <input type="checkbox" value="130" id="130" name="filter_objects" />
+                        <input type="checkbox" value="100" id="100" name="filter_objects" />
+                    </div>
+                </div>
+            </div>
+    
+            <div class="filter-object">
+                <h2>BATHROOM</h2>
+                <div class="filter-object--options">
+                    <div class="filter-object--options-names">
+                        <p> Shared </p>
+                        <p> En-Suite </p>
+                    </div>
+                    <div class="filter-object--options-boxes">
+                        <input type="checkbox" value="Shared" id="shared" name="filter_objects" />
+                        <input type="checkbox" value="En Suite" id="En-suite" name="filter_objects" />
+                    </div>
+                </div>
+            </div>
+			<input class="filter-button" type="submit" value="APPLY"/>
+		</form>
+
+	</div>
+	<div class="search--results">
+        <!-- if first load -->
+		{% if request.method != "POST" %}
+		{% for accom in accom %}
+        <div class="search--results-container">
+            <div class="search--results-container--image">
+                <img class="search--results-image" src='{% static accom.image %}' height="170" width="170">
+            </div>
+            <div class="search--results-container--info">
+                <p><a href="{% url 'accommodation' accom.id %}">{{accom.name}}</a></p>
+            </div>
+        </div>
+		{% endfor %}
+        <!-- after filter is applied -->
+		{% else %}
+        {% for i, j in zip_dict %}
+        <div class="search--results-container">
+            <div class="search--results-container--image">
+                <img class="search--results-image" src='{{ j.1 }}' height="170" width="170">
+            </div>
+            <div class="search--results-container--info">
+                <p><a href="{% url 'accommodation' i.0 %}">{{ i.1 }}</a></p>
+            </div>
+        </div>
+		{% endfor %}
+		{% endif %}
+	</div>
+</div>
+
+{% endblock%}

@@ -1,0 +1,96 @@
+.about-container{
+    background-color: rgba(0, 0, 0, 0.33);
+    width: 1241px;
+    height: auto;
+    padding: 30px 5px;
+    margin-top: 131px;
+    margin-bottom: 60px;
+    border-radius: 50px;
+}
+
+.about-container h1,
+.about-contact-container h1{
+    letter-spacing: 1rem; 
+    color: #EBA550;
+    text-align: center;
+}
+
+.about-container h2{
+    color: #ebe7e2;
+    text-align: center;
+}
+
+.member-row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.member-row .member-col{
+    text-align: center;
+}
+
+.team_images{
+    width: 100%;
+    height: 70%;
+    border-radius: 50%;
+}
+
+.intro-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+} 
+
+.intro-text-col{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-left: 130px;
+    margin-right: 50px;
+}
+
+.intro-row p{
+    letter-spacing: 1px;
+    line-height: 1.1em;
+}
+
+.intro-img-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-row .intro-img-col img{
+    width:80%;
+    border: #B94E36 solid 2px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-contact-container{
+    background-color: rgba(0, 0, 0, 0.33);
+    width: 1241px;
+    height: auto;
+    padding: 30px 5px;
+    margin-top: 131px;
+    margin-bottom: 60px;
+    border-radius: 50px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+
+}
+
+.about-contact-container p{
+    width: 70%;
+}
+
+.about-contact-container a{
+    color: #B94E36;
+}

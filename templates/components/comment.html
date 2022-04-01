@@ -1,0 +1,36 @@
+{% block content %}
+
+<div class="comment-conatiner">
+    <div class="comment-title">
+        <p>{{comment.subject}}</p>
+    </div>
+    <div class="comment-info">
+        <p>
+            {{ comment }}
+        </p>
+    </div>
+
+    <div class="comment-separator">
+        <div class="line"></div>
+    </div>
+
+    <div class="comment-ratings">
+        <div class="col1">
+            <p>Overall {{comment.overall}}/5</p>
+            <p>Social {{comment.social}}/5</p>
+            <p>Internet {{comment.internet}}/5</p>
+        </div>
+
+        <div class="col2">
+            <p>Internet {{comment.internet}}/5</p>
+            <p>Value for Money {{comment.value_of_money}}/5</p>
+            <p>Social {{comment.social}}/5</p>
+        </div>
+    </div>
+
+    <div class="comment-owner">
+        <h5 style="letter-spacing: 3px;">{{comment.}}</h5>
+    </div>
+</div>
+
+{% endblock %}

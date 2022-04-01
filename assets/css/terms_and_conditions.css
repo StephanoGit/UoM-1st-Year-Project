@@ -1,0 +1,13 @@
+.RoundedCorner {
+    border-radius:  50px;
+    background-color: rgba(0, 0, 0, 0.315);
+    padding:  30px;
+    width:  1000px;
+    height:  auto;
+    text-align: left;
+    margin-top: 100px;
+}
+
+table, th, td {
+    border: #101524;
+}

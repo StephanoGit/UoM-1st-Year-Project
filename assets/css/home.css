@@ -1,0 +1,36 @@
+.home-welcome-container {
+    width: 50vw;
+    height: 30vh;
+    margin-top: 161px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.home-welcome-container h1 {
+    float: left;
+    font-size: 3em;
+    letter-spacing: 1rem;
+    color: #EBA550;
+}
+
+.home-welcome-container p {
+    font-size: 1.7em;
+    letter-spacing: 0.6rem;
+    color: #B94E36;
+    text-align: center;
+}
+
+.home-search-bar--input {
+    background-color: rgba(0, 0, 0, 0.33);
+    font-family: 'Fabula Valhalla';
+    height: 50px;
+    width: 400px;
+    border: solid #B94E36 2px;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    float: right;
+}

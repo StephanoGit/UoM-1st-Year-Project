@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/answer.css' %}">
+{% endblock %}
+{% block content %}
+
+<form method = "POST" action="">
+  {% csrf_token %}
+  <div class="answer-answerbox">
+
+    <div class="answer-header-row">
+        <span>QUESTION</span>
+    </div>
+
+    <div class="answer-row-question">
+      {{question.question}}
+    </div>
+
+    <div class="answer-row-answerbox">
+      {{form.answer}}
+    </div>
+
+    <div class="answer-submit-button-container">
+      <input class="answer-submit-button" , type="submit" , value="Submit My Answer"/>
+    </div>
+
+    </form>
+  </div>
+
+{% endblock %}

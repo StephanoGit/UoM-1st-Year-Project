@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/ranking.css' %}" />
+{% endblock %}
+{% block content %}
+
+<div class="ranking-table-panel">
+	<h2>RANKINGS</h2>
+	<div class="ranking-table-info">
+		<div class="ranking-table-column">
+			{% for i , j in dataframe.items %}
+			<h3>{{forloop.counter}}. {{i}}</h3>
+			{% endfor %}
+		</div>
+
+		<div class="ranking-table-column information">
+			{% for i , j in dataframe.items %}
+			<h3>{{j}}</h3>
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="ranking-table-separator"></div>
+</div>
+
+{% endblock %}

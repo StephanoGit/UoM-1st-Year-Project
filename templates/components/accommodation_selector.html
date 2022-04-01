@@ -1,0 +1,26 @@
+{% load static %}
+{% block content %}
+
+{% for region in region %}
+<div class="accomodation_selector-locations-container">
+    {% if region.name == "Victoria Park" %}
+    <img class="accomodation_selector-locations-image" src="{% static 'images/victoriaPark_big.png' %}"></img>
+    {% elif region.name == "City Centre" %}
+    <img class="accomodation_selector-locations-image" src="{% static 'images/cityCenter_big.png' %}"></img>
+    {% elif region.name == "Fallowfield" %}
+    <img class="accomodation_selector-locations-image" src="{% static 'images/fallowfield_big.png' %}"></img>
+    {% endif %}
+    <h1 class="accomodation_selector-locations-name ">{{region.name}}</h1>
+    <div class="accomodation_selector-buttons-container">
+        {% for accom in accom %}
+        {% if region.name == accom.region.name %}
+        <a href="{% url 'accommodation' accom.id %}" class="accomodation_selector-buttons-text">{{accom.name}}</a>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+</div>
+{% endfor %}
+
+
+{% endblock %}
