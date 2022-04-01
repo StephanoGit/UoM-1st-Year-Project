@@ -163,7 +163,7 @@ EMAIL_MAIL_HTML = 'mail_body.html'
 EMAIL_MAIL_PLAIN = 'mail_body.txt'
 
 EMAIL_PAGE_TEMPLATE = 'confirm_email.html'
-EMAIL_PAGE_DOMAIN = 'http://127.0.0.1:8000/'
+EMAIL_PAGE_DOMAIN = 'https://marss-project.herokuapp.com/'
 
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
